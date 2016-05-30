@@ -2,12 +2,10 @@ package dao;
  
 import java.sql.Connection; 
 import java.sql.DriverManager;
-//import java.sql.Statement;
+import java.sql.Statement;
  
 public class Conexao{
-	Connection con;
-	// private Connection oConn;
-	// private Statement sStmt;
+	static Connection con;
   
   
 	public Connection getConnection(){
