@@ -2,13 +2,18 @@ package view;
 
 
 import javax.swing.JFrame;
+
 import java.awt.GridLayout;
+
 import javax.swing.JLabel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
+
+import control.TelaCadHandler;
+
 import java.awt.Color;
 
 public class TelaCadBar extends JFrame {
@@ -20,6 +25,38 @@ public class TelaCadBar extends JFrame {
 	private JTextField estadoTField;
 	private JTextField contatoTField;
 	private JTextField obsTField;
+	private JButton btnCadastrar;
+	public JTextField getNomeTField() {
+		return nomeTField;
+	}
+
+	public JTextField getRuaTField() {
+		return ruaTField;
+	}
+
+	public JTextField getNumTField() {
+		return numTField;
+	}
+
+	public JTextField getBairroTField() {
+		return bairroTField;
+	}
+
+	public JTextField getCidadeTField() {
+		return cidadeTField;
+	}
+
+	public JTextField getEstadoTField() {
+		return estadoTField;
+	}
+
+	public JTextField getContatoTField() {
+		return contatoTField;
+	}
+
+	public JTextField getObsTField() {
+		return obsTField;
+	}
 
 	public TelaCadBar() {
 		getContentPane().setBackground(new Color(255, 255, 204));
@@ -29,6 +66,7 @@ public class TelaCadBar extends JFrame {
 		setVisible(true);
 		setBounds(100, 100, 376, 275);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		
 		JLabel lblNome = new JLabel("Nome:");
 		
@@ -73,7 +111,8 @@ public class TelaCadBar extends JFrame {
 		obsTField = new JTextField();
 		obsTField.setColumns(10);
 		
-		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new TelaCadHandler(this));
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
