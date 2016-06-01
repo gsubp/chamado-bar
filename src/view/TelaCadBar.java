@@ -61,10 +61,10 @@ public class TelaCadBar extends JFrame {
 	public TelaCadBar() {
 		getContentPane().setBackground(new Color(255, 255, 204));
 		getContentPane().setForeground(Color.BLACK);
-		setResizable(false);
+		setResizable(true);
 		setTitle("Tela de Cadastro");
 		setVisible(true);
-		setBounds(100, 100, 376, 275);
+		setBounds(100, 100, 450, 267);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
@@ -113,56 +113,54 @@ public class TelaCadBar extends JFrame {
 		
 		btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new TelaCadHandler(this));
-		
-		JButton btnCancelar = new JButton("Cancelar");
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblEndereo)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
 						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(lblN)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(numTField, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(lblBairro)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(bairroTField, 206, 206, 206))
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(lblContato)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(contatoTField, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE))
-						.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
-							.addGroup(groupLayout.createSequentialGroup()
-								.addComponent(lblObservao)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(obsTField))
-							.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-								.addComponent(lblCidade)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(cidadeTField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addGap(96)
-								.addComponent(lblEstado)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(estadoTField, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)))
-						.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
-							.addGroup(groupLayout.createSequentialGroup()
-								.addComponent(lblNome)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(nomeTField))
-							.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-								.addComponent(lblRua)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(ruaTField, 322, 322, 322))))
-					.addContainerGap(19, Short.MAX_VALUE))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(66)
-					.addComponent(btnCancelar)
-					.addPreferredGap(ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-					.addComponent(btnCadastrar)
-					.addGap(64))
+							.addContainerGap()
+							.addComponent(btnCadastrar, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
+							.addGap(52))
+						.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+							.addContainerGap()
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addComponent(lblEndereo)
+								.addGroup(groupLayout.createSequentialGroup()
+									.addComponent(lblN)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(numTField, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(lblBairro)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(bairroTField, 206, 206, 206))
+								.addGroup(groupLayout.createSequentialGroup()
+									.addComponent(lblContato)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(contatoTField, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE))
+								.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblObservao)
+										.addPreferredGap(ComponentPlacement.RELATED)
+										.addComponent(obsTField))
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblCidade)
+										.addPreferredGap(ComponentPlacement.RELATED)
+										.addComponent(cidadeTField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+										.addGap(96)
+										.addComponent(lblEstado)
+										.addPreferredGap(ComponentPlacement.RELATED)
+										.addComponent(estadoTField, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)))
+								.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblNome)
+										.addPreferredGap(ComponentPlacement.RELATED)
+										.addComponent(nomeTField))
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblRua)
+										.addPreferredGap(ComponentPlacement.RELATED)
+										.addComponent(ruaTField, 322, 322, 322))))))
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -198,10 +196,8 @@ public class TelaCadBar extends JFrame {
 						.addComponent(lblObservao)
 						.addComponent(obsTField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnCancelar)
-						.addComponent(btnCadastrar))
-					.addContainerGap(75, Short.MAX_VALUE))
+					.addComponent(btnCadastrar, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(46, Short.MAX_VALUE))
 		);
 		getContentPane().setLayout(groupLayout);
 
