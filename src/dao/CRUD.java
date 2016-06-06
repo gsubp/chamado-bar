@@ -31,8 +31,7 @@ public class CRUD {
 	public Bar buscar(String nome){
 		try{
 			stmt = (Statement) Conexao.con.createStatement();			
-			ResultSet rs = stmt.executeQuery("select * from bares where nome = '"+nome+"';");
-			
+			ResultSet rs = stmt.executeQuery("select * from bares where nome = '"+nome+"';");			
 			while(rs.next()){
 				String nomeB= rs.getString("nome");
 				String endereco = rs.getString("endereco");
@@ -79,6 +78,17 @@ public class CRUD {
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
+		return false;
+	}
+	
+	public boolean remover(String nome){
+		try {            
+			stmt = (Statement) Conexao.con.createStatement();
+            stmt.executeUpdate("DELETE FROM bares WHERE nome='"+ nome +"'");
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 		return false;
 	}
 }
