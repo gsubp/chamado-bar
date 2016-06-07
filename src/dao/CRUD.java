@@ -53,11 +53,12 @@ public class CRUD {
 			ResultSet rs = stmt.executeQuery("select * from bares;");
 			
 			while(rs.next()){
+				String id = rs.getString("id");
 				String nomeB= rs.getString("nome");
 				String endereco = rs.getString("endereco");
 				String contato = rs.getString("contato");
 				String obs = rs.getString("obsBar");
-				bares.add(new Bar(nomeB, endereco, contato, obs));			
+				bares.add(new Bar(id,nomeB, endereco, contato, obs));			
 			}
 		}
 		catch(SQLException e){
