@@ -1,11 +1,23 @@
 package model;
 
 public class Bar {
+	private String id;
 	private String nome;
 	private String endereco;
 	private String contato;
 	private String obsBar;
 	
+	
+	public Bar(String id, String nome, String endereco, String contato,
+			String obsBar) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.contato = contato;
+		this.obsBar = obsBar;
+	}
+
 	public Bar(String nome, String endereco, String contato, String obsBar) {
 		super();
 		this.nome = nome;
@@ -42,8 +54,16 @@ public class Bar {
 		return obsBar;
 	}
 
-	public void setObservacao(String obsBar) {
+	public void setObsBar(String obsBar) {
 		this.obsBar = obsBar;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	
