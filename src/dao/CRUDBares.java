@@ -10,7 +10,7 @@ import com.mysql.jdbc.Statement;
 
 import model.Bar;
 
-public class CRUD {
+public class CRUDBares {
 	Statement stmt;
 	
 	public void inserir(Bar bar){

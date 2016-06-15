@@ -1,0 +1,64 @@
+package control;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JOptionPane;
+
+import dao.CRUDUsers;
+import model.Usuario;
+import view.TelaCadUser;
+import view.TelaLogin;
+
+public class TelaLoginHandler implements ActionListener,MouseListener {
+	private TelaLogin tela;	
+
+	public TelaLoginHandler(TelaLogin tela) {
+		super();
+		this.tela = tela;
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Usuario user = new CRUDUsers().logar(tela.getLoginField().getText());
+		if(e.getSource()==tela.getLogarButton()){
+			if(user==null){
+				JOptionPane.showMessageDialog(null,"Usuário não enontrado");
+				tela.getLoginField().setText(null);
+				tela.getSenhaField().setText(null);
+			}
+			else{
+				if(user.getLogin().equals(tela.getLoginField().getText())&&user.getSenha().equals(tela.getSenhaField().getText())){
+					JOptionPane.showMessageDialog(null,"Logado com Sucesso.");
+					switch(user.getPersp()){
+						case "Admin":{}break; //telaAdmin
+						case "Dono de Bar":{}break; //telaDono
+						case "Usuário Comum":{}break; //telaComum 
+					}
+					tela.dispose();
+					tela=null;
+					System.gc();
+				}
+				else{
+					JOptionPane.showMessageDialog(null,"Login/senha incorretos");
+					tela.getLoginField().setText(null);
+					tela.getSenhaField().setText(null);
+				}
+			}
+		}
+	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		tela.setVisible(false);
+		new TelaCadUser();		
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {}
+	@Override
+	public void mouseExited(MouseEvent e) {}
+	@Override
+	public void mousePressed(MouseEvent e) {}
+	@Override
+	public void mouseReleased(MouseEvent e) {}
+}
