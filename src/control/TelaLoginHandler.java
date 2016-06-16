@@ -22,6 +22,8 @@ public class TelaLoginHandler implements ActionListener,MouseListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Usuario user = new CRUDUsers().logar(tela.getLoginField().getText());
+		if(e.getSource()==tela.getSairButton())
+			System.exit(0);
 		if(e.getSource()==tela.getLogarButton()){
 			if(user==null){
 				JOptionPane.showMessageDialog(null,"Usuário não enontrado");
@@ -50,8 +52,7 @@ public class TelaLoginHandler implements ActionListener,MouseListener {
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		tela.setVisible(false);
-		new TelaCadUser();		
+		new TelaCadUser(tela);		
 	}
 	@Override
 	public void mouseEntered(MouseEvent e) {}

@@ -30,7 +30,8 @@ public class TelaLogin extends JFrame {
 	public TelaLogin() {
 		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 220, 149);
+		setBounds(100, 100, 220, 110);
+		setUndecorated(true);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -69,16 +70,16 @@ public class TelaLogin extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(lblSenha)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(senhaField))
+							.addComponent(senhaField, 145, 145, 145))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(logarButton, GroupLayout.PREFERRED_SIZE, 69, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
 							.addComponent(sairButton, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(241, Short.MAX_VALUE))
+					.addContainerGap(27, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(45)
+					.addGap(39)
 					.addComponent(cadastroLabel)
-					.addContainerGap(54, Short.MAX_VALUE))
+					.addContainerGap(61, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -94,8 +95,9 @@ public class TelaLogin extends JFrame {
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(logarButton)
 						.addComponent(sairButton))
-					.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addComponent(cadastroLabel))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(cadastroLabel)
+					.addContainerGap(44, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 		setResizable(false);
