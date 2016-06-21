@@ -13,6 +13,7 @@ import view.TelaCadUser;
 import view.TelaDono;
 import view.TelaInicioAdmin;
 import view.TelaLogin;
+import view.TelaUserComum;
 
 public class TelaLoginHandler implements ActionListener,MouseListener {
 	private TelaLogin tela;	
@@ -39,7 +40,9 @@ public class TelaLoginHandler implements ActionListener,MouseListener {
 						new TelaInicioAdmin();
 					if(user.getPersp().equals("Dono de Bar"))
 						new TelaDono();
-//					if(user.getPersp().equals("Comum")))
+					if(user.getPersp().equals("Comum"))
+						new TelaUserComum();
+						
 						
 					tela.dispose();
 					tela=null;
