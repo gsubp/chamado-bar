@@ -19,11 +19,11 @@ public class TelaCadUserHandler implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource()==tela.getDonoBarRB())
-			persp = tela.getDonoBarRB().getText();
-		if(e.getSource()==tela.getUsuarioRB())
-			persp = tela.getUsuarioRB().getText();		
 		if(e.getSource()==tela.getCadastrarButton()){
+			if(tela.getDonoBarRB().isSelected())
+				persp="Dono de Bar";
+			if(tela.getUsuarioRB().isSelected())
+				persp="Comum";
 			if(new CRUDUsers().inserir(new Usuario(tela.getLoginField().getText(), tela.getSenhaField().getText(), persp))){
 				JOptionPane.showMessageDialog(null, "Cadastrado com sucesso.");
 				tela.setVisible(false);

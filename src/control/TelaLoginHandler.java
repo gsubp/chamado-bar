@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import dao.CRUDUsers;
 import model.Usuario;
 import view.TelaCadUser;
+import view.TelaDono;
 import view.TelaInicioAdmin;
 import view.TelaLogin;
 
@@ -34,11 +35,12 @@ public class TelaLoginHandler implements ActionListener,MouseListener {
 			else{
 				if(user.getLogin().equals(tela.getLoginField().getText())&&user.getSenha().equals(tela.getSenhaField().getText())){
 					JOptionPane.showMessageDialog(null,"Logado com Sucesso.");
-					switch(user.getPersp()){
-						case "Admin":{new TelaInicioAdmin();}break; //telaAdmin
-						case "Dono de Bar":{}break; //telaDono
-						case "Usuário Comum":{}break; //telaComum 
-					}
+					if(user.getPersp().equals("Admin"))
+						new TelaInicioAdmin();
+					if(user.getPersp().equals("Dono de Bar"))
+						new TelaDono();
+//					if(user.getPersp().equals("Comum")))
+						
 					tela.dispose();
 					tela=null;
 					System.gc();
