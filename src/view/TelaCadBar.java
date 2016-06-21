@@ -26,37 +26,6 @@ public class TelaCadBar extends JFrame {
 	private JTextField contatoTField;
 	private JTextField obsTField;
 	private JButton btnCadastrar;
-	public JTextField getNomeTField() {
-		return nomeTField;
-	}
-
-	public JTextField getRuaTField() {
-		return ruaTField;
-	}
-
-	public JTextField getNumTField() {
-		return numTField;
-	}
-
-	public JTextField getBairroTField() {
-		return bairroTField;
-	}
-
-	public JTextField getCidadeTField() {
-		return cidadeTField;
-	}
-
-	public JTextField getEstadoTField() {
-		return estadoTField;
-	}
-
-	public JTextField getContatoTField() {
-		return contatoTField;
-	}
-
-	public JTextField getObsTField() {
-		return obsTField;
-	}
 
 	public TelaCadBar() {
 		getContentPane().setBackground(new Color(255, 255, 204));
@@ -65,7 +34,7 @@ public class TelaCadBar extends JFrame {
 		setTitle("Tela de Cadastro");
 		setVisible(true);
 		setBounds(100, 100, 450, 267);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
 		
 		JLabel lblNome = new JLabel("Nome:");
@@ -201,5 +170,37 @@ public class TelaCadBar extends JFrame {
 		);
 		getContentPane().setLayout(groupLayout);
 
+	}
+	
+	public JTextField getNomeTField() {
+		return nomeTField;
+	}
+
+	public JTextField getRuaTField() {
+		return ruaTField;
+	}
+
+	public JTextField getNumTField() {
+		return numTField;
+	}
+
+	public JTextField getBairroTField() {
+		return bairroTField;
+	}
+
+	public JTextField getCidadeTField() {
+		return cidadeTField;
+	}
+
+	public JTextField getEstadoTField() {
+		return estadoTField;
+	}
+
+	public JTextField getContatoTField() {
+		return contatoTField;
+	}
+
+	public JTextField getObsTField() {
+		return obsTField;
 	}
 }

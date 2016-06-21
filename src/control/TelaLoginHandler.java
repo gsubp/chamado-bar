@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import dao.CRUDUsers;
 import model.Usuario;
 import view.TelaCadUser;
+import view.TelaInicioAdmin;
 import view.TelaLogin;
 
 public class TelaLoginHandler implements ActionListener,MouseListener {
@@ -34,7 +35,7 @@ public class TelaLoginHandler implements ActionListener,MouseListener {
 				if(user.getLogin().equals(tela.getLoginField().getText())&&user.getSenha().equals(tela.getSenhaField().getText())){
 					JOptionPane.showMessageDialog(null,"Logado com Sucesso.");
 					switch(user.getPersp()){
-						case "Admin":{}break; //telaAdmin
+						case "Admin":{new TelaInicioAdmin();}break; //telaAdmin
 						case "Dono de Bar":{}break; //telaDono
 						case "Usuário Comum":{}break; //telaComum 
 					}
@@ -51,9 +52,7 @@ public class TelaLoginHandler implements ActionListener,MouseListener {
 		}
 	}
 	@Override
-	public void mouseClicked(MouseEvent e) {
-		new TelaCadUser(tela);		
-	}
+	public void mouseClicked(MouseEvent e) {new TelaCadUser(tela);}
 	@Override
 	public void mouseEntered(MouseEvent e) {}
 	@Override

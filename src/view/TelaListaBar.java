@@ -16,6 +16,8 @@ import java.awt.GridLayout;
 
 import javax.swing.table.DefaultTableModel;
 
+import control.TabelaHandler;
+
 public class TelaListaBar extends JFrame {
 
 	private JTable table;

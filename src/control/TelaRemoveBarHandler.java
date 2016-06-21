@@ -7,7 +7,7 @@ import java.awt.event.ItemListener;
 
 import javax.swing.JOptionPane;
 
-import dao.CRUD;
+import dao.CRUDBares;
 import view.TelaRemoveBar;
 
 public class TelaRemoveBarHandler implements ActionListener {
@@ -22,7 +22,7 @@ public class TelaRemoveBarHandler implements ActionListener {
 			JOptionPane.showMessageDialog(null, "Selecione um Bar!!");
 		else{
 			String nome = tela.getComboBox().getSelectedItem().toString();
-			if(new CRUD().remover(nome))
+			if(new CRUDBares().remover(nome))
 				JOptionPane.showMessageDialog(null, "Bar Removido");
 			else
 				JOptionPane.showMessageDialog(null, "Bar Não Removido");
