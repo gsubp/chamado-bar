@@ -1,8 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -15,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class TelaNewAdmin extends JFrame {
 
@@ -29,23 +27,29 @@ public class TelaNewAdmin extends JFrame {
 		setTitle("Novo Admin");
 		
 		contentPane = new JPanel();
+		contentPane.setForeground(Color.WHITE);
+		contentPane.setBackground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JLabel lblLogin = new JLabel("Login:");
+		lblLogin.setForeground(Color.WHITE);
 		
 		loginField = new JTextField();
 		loginField.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("Senha:");
+		lblSenha.setForeground(Color.WHITE);
 		
 		senhaField = new JTextField();
 		senhaField.setColumns(10);
 		
 		cadButton = new JButton("Cadastrar");
+		cadButton.setBackground(Color.WHITE);
 		cadButton.addActionListener(new TelaNewAdminHandler(this));
 		
 		cancelButton = new JButton("Cancelar");
+		cancelButton.setBackground(Color.WHITE);
 		cancelButton.addActionListener(new TelaNewAdminHandler(this));
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -87,7 +91,7 @@ public class TelaNewAdmin extends JFrame {
 		
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		setResizable(false);
-		setBounds(100, 100, 300, 115);
+		setBounds(100, 100, 270, 115);
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
