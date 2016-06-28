@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.Font;
 
 public class TelaCadUser extends JFrame {
 
@@ -34,35 +36,47 @@ public class TelaCadUser extends JFrame {
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 295, 135);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JLabel lblLogin = new JLabel("Login:");
+		lblLogin.setForeground(Color.WHITE);
 		
 		loginField = new JTextField();
 		loginField.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("Senha:");
+		lblSenha.setForeground(Color.WHITE);
 		
 		senhaField = new JTextField();
 		senhaField.setColumns(10);
 		
 		JLabel lblEuSou = new JLabel("Eu sou:");
+		lblEuSou.setForeground(Color.WHITE);
 		
 		ButtonGroup group = new ButtonGroup();
 		
 		donoBarRB = new JRadioButton("Dono de bar",true);
+		donoBarRB.setBackground(Color.BLACK);
+		donoBarRB.setForeground(Color.WHITE);
 		
 		usuarioRB = new JRadioButton("Usuário comum",false);
+		usuarioRB.setBackground(Color.BLACK);
+		usuarioRB.setForeground(Color.WHITE);
 		
 		group.add(donoBarRB);
 		group.add(usuarioRB);
 		
 		
 		cadastrarButton = new JButton("Cadastrar");
+		cadastrarButton.setFont(new Font("Tahoma", Font.BOLD, 14));
+		cadastrarButton.setBackground(Color.WHITE);
 		cadastrarButton.addActionListener(new TelaCadUserHandler(this));
 		
 		cancelarButton = new JButton("Cancelar");
+		cancelarButton.setBackground(Color.WHITE);
+		cancelarButton.setFont(new Font("Tahoma", Font.BOLD, 14));
 		cancelarButton.addActionListener(new TelaCadUserHandler(this));
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
