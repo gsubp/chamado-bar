@@ -26,37 +26,44 @@ public class TelaAtualizaBar extends JFrame {
 	
 	public TelaAtualizaBar() {
 		setResizable(false);
-		setTitle("Atualizar InformaÃ§Ãµes");
+		setTitle("Atualizar Informações");
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 250);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 255, 204));
+		contentPane.setBackground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JLabel lblBar = new JLabel("Bar:");
+		lblBar.setForeground(Color.WHITE);
 		
 		comboBox = new JComboBox<String>(new TelaAtualizaBarHandler().bares());
 		comboBox.setSelectedItem(0);
 		comboBox.addItemListener(new TelaAtualizaBarHandler(this));
 		
 		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setForeground(Color.WHITE);
 		
 		nomeField = new JTextField(10);
 		
-		JLabel lblEndereo = new JLabel("EndereÃ§o:");
+		JLabel lblEndereo = new JLabel("Endereço:");
+		lblEndereo.setForeground(Color.WHITE);
 		
 		enderecoField = new JTextField(10);
 		
 		JLabel lblContato = new JLabel("Contato:");
+		lblContato.setForeground(Color.WHITE);
 		
 		contatoField = new JTextField(10);
 		
-		JLabel lblObservao = new JLabel("ObservaÃ§Ã£o:");
+		JLabel lblObservao = new JLabel("Observa\u00E7\u00E3o:");
+		lblObservao.setForeground(Color.WHITE);
 		
 		obsField = new JTextField(10);
 		
 		btnAtualizar = new JButton("Atualizar");
+		btnAtualizar.setFont(new java.awt.Font("Tahoma", java.awt.Font.BOLD, 13));
+		btnAtualizar.setBackground(Color.WHITE);
 		btnAtualizar.addActionListener(new TelaAtualizaBarHandler(this));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
