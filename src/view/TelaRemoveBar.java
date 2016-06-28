@@ -14,6 +14,7 @@ import control.TelaAtualizaBarHandler;
 import control.TelaRemoveBarHandler;
 
 import java.awt.Color;
+import java.awt.Font;
 
 public class TelaRemoveBar extends JFrame {
 
@@ -24,19 +25,22 @@ public class TelaRemoveBar extends JFrame {
 	public TelaRemoveBar() {
 		setTitle("Remover Bar");
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 86);
+		setBounds(100, 100, 468, 92);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 255, 204));
+		contentPane.setBackground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JLabel lblBar = new JLabel("Bar:");
+		lblBar.setForeground(Color.WHITE);
 		
 		comboBox = new JComboBox<String>(new TelaAtualizaBarHandler().bares());
 		comboBox.setSelectedItem(0);
 
 		
 		btnRemover = new JButton("Remover");
+		btnRemover.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnRemover.setBackground(Color.WHITE);
 		btnRemover.addActionListener(new TelaRemoveBarHandler(this));
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
