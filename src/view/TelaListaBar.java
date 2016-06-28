@@ -1,18 +1,11 @@
 package view;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -26,8 +19,9 @@ public class TelaListaBar extends JFrame {
 
 	public TelaListaBar() {
 		super("Listar Bares");
+		getContentPane().setBackground(Color.BLACK);
 		
-		setLayout(new BorderLayout());
+		getContentPane().setLayout(new BorderLayout());
 		model = new DefaultTableModel();
 		model.addColumn("ID");
 		model.addColumn("Nome");
@@ -38,7 +32,7 @@ public class TelaListaBar extends JFrame {
 		table = new JTable(model);
 		
 		scroll = new JScrollPane(table);		
-		add(scroll,BorderLayout.CENTER);
+		getContentPane().add(scroll,BorderLayout.CENTER);
 		setSize(500, 400);
 		
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
