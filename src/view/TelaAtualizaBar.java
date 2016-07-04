@@ -14,7 +14,6 @@ import javax.swing.JButton;
 import control.TelaAtualizaBarHandler;
 
 public class TelaAtualizaBar extends JFrame {
-
 	private JPanel contentPane;
 	private JTextField nomeField;
 	private JTextField enderecoField;

@@ -2,12 +2,7 @@ package dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import javax.swing.JOptionPane;
-
 import com.mysql.jdbc.Statement;
-
-import model.Bar;
 import model.Usuario;
 
 public class CRUDUsers {

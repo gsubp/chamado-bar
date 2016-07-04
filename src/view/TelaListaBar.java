@@ -1,14 +1,10 @@
 package view;
-
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
-
 import javax.swing.table.DefaultTableModel;
-
 import control.TabelaHandler;
 
 public class TelaListaBar extends JFrame {

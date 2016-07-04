@@ -1,17 +1,12 @@
 package view;
-
-
 import javax.swing.JFrame;
-
 import javax.swing.JLabel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
-
 import control.TelaCadHandler;
-
 import java.awt.Color;
 import java.awt.Font;
 

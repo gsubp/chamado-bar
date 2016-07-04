@@ -1,10 +1,6 @@
 package view;
-
-import java.awt.Cursor;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
 import control.TelaInicioAdminHandler;
 import java.awt.Color;
 import java.awt.Font;

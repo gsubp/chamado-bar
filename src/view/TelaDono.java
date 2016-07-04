@@ -1,12 +1,8 @@
 package view;
-
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import control.TelaDonoHandler;
-
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
@@ -15,7 +11,6 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class TelaDono extends JFrame {
-
 	private JPanel contentPane;
 	private JButton cadButton;
 	private JButton atualizaButton;
